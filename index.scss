@@ -1,0 +1,65 @@
+// IMPORT RUBIK FONT FROM GOOGLE FONT
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,300..900;1,300..900&display=swap");
+
+// CSS RESET
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 18px;
+}
+
+// VARIABLES FOR COLORS
+$primary-green-400: hsl(172, 67%, 45%);
+$neutral-green-900: hsl(183, 100%, 15%);
+$neutral-grey-500: hsl(186, 14%, 43%);
+$neutral-grey-400: hsl(184, 14%, 56%);
+$neutral-grey-200: hsl(185, 41%, 84%);
+$neutral-grey-50: hsl(189, 47%, 97%);
+$white: hsl(0, 100%, 100%);
+
+
+body {
+  background-color: $neutral-grey-200;
+  font-family: "Space Mono";
+}
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.logo {
+    text-align: center;
+}
+
+main {
+  background-color: $white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.flex {
+
+  display: flex;
+  // padding: 20px;
+}
+
+.bill,
+.select-tip {
+  margin-block: 10px;
+}
+
+.second {
+    background-color: $neutral-green-900;
+    margin-inline-start: 20px;
+}

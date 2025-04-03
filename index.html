@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frontend Mentor | Tip calculator app</title>
+    <link rel="stylesheet" href="index.css" />
+    <link
+      rel="shortcut icon"
+      href="images/favicon-32x32.png"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <header class="logo">
+        <img src="images/logo.svg" alt="Splitter Logo" />
+      </header>
+      <main>
+        <div class="flex">
+          <section class="first">
+            <p class="bill">Bill</p>
+            <div>
+              <img src="images/icon-dollar.svg" alt="Dollar Icon" />
+              <input type="text" name="bill-input" id="bill-input" />
+            </div>
+
+            <p class="select-tip">Select Tip %</p>
+            <div>
+              <div>
+                <button>5%</button>
+                <button>10%</button>
+                <button>15%</button>
+              </div>
+
+              <div>
+                <button>25%</button>
+                <button>50%</button>
+                <button>Custom</button>
+              </div>
+            </div>
+
+            <p>Number of People</p>
+            <div>
+              <img src="images/icon-person.svg" alt="Person Icon" />
+              <input type="text" name="num-of-people" id="num-of-people" />
+            </div>
+          </section>
+
+          <section class="second">
+            <div>
+              <div>
+                <span>Tip Amount</span>
+                <span>/ person</span>
+              </div>
+
+              <div>
+                <span>Total</span>
+                <span>/ person</span>
+              </div>
+            </div>
+
+            <button>RESET</button>
+          </section>
+        </div>
+      </main>
+
+      <footer>
+        <div class="attribution">
+          Challenge by
+          <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+            >Frontend Mentor</a
+          >. Coded by <a href="#">trillCodes</a>.
+        </div>
+      </footer>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
