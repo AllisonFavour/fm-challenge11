@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,300..900;1,300..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 *,
 *::before,
 *::after {
@@ -13,10 +13,30 @@
 
 body {
   background-color: hsl(185, 41%, 84%);
-  font-family: "Space Mono";
+  font-family: "Space Mono", monospace;
 }
 
-.container {
+button {
+  width: auto;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  gap: 0.5rem;
+}
+
+.row {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.row button {
+  flex: 1;
+}
+
+.main-container {
   width: 100%;
   min-height: 100vh;
   display: flex;
@@ -31,20 +51,27 @@ body {
 
 main {
   background-color: hsl(0, 100%, 100%);
-  padding: 20px;
+  padding: 1.1rem;
   border-radius: 10px;
+  border: 1px solid red;
 }
 
-.flex {
+.flex-container {
   display: flex;
 }
 
-.bill,
-.select-tip {
-  margin-block: 10px;
+.first-box {
+  border: 1px solid green;
 }
 
-.second {
+.first-box p {
+  font-size: 0.7rem;
+  color: hsl(186, 14%, 43%);
+}
+
+.second-box {
   background-color: hsl(183, 100%, 15%);
-  margin-inline-start: 20px;
+  margin-inline-start: 1.1rem;
+  padding: 1.1rem;
+  border-radius: 10px;
 }/*# sourceMappingURL=index.css.map */
