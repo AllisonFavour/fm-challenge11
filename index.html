@@ -20,9 +20,9 @@
         <div class="flex-container">
           <section class="first-box">
             <p>Bill</p>
-            <div>
+            <div class="input">
               <img src="images/icon-dollar.svg" alt="Dollar Icon" />
-              <input type="text" name="bill-input" id="bill-input" />
+              <input type="text" name="bill-input" id="bill-input" placeholder="0" />
             </div>
 
             <p>Select Tip %</p>
@@ -30,37 +30,43 @@
               <div class="row">
                 <button>5%</button>
                 <button>10%</button>
-                <button>15%</button>
+                <button class="green-400">15%</button>
               </div>
 
               <div class="row">
                 <button>25%</button>
                 <button>50%</button>
-                <button>Custom</button>
+                <button class="grey-50">Custom</button>
               </div>
             </div>
 
             <p>Number of People</p>
-            <div>
+            <div class="input">
               <img src="images/icon-person.svg" alt="Person Icon" />
-              <input type="text" name="num-of-people" id="num-of-people" />
+              <input type="text" name="num-of-people" id="num-of-people" placeholder="0" />
             </div>
           </section>
 
           <section class="second-box">
-            <div>
-              <div>
-                <span>Tip Amount</span>
-                <span>/ person</span>
+            <div id="display">
+              <div class="flex-display">
+                <div class="flex-col">
+                  <span>Tip Amount</span>
+                  <span>/ person</span>
+                </div>
+                <span>$0.00</span>
               </div>
 
-              <div>
-                <span>Total</span>
-                <span>/ person</span>
+              <div class="flex-display">
+                <div class="flex-col">
+                  <span>Total</span>
+                  <span>/ person</span>
+                </div>
+                <span>$0.00</span>
               </div>
             </div>
 
-            <button>RESET</button>
+            <button class="reset-btn">RESET</button>
           </section>
         </div>
       </main>
@@ -70,7 +76,7 @@
           Challenge by
           <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
             >Frontend Mentor</a
-          >. Coded by <a href="#">trillCodes</a>.
+          >. Coded by <a class="link" href="https://allison-favour-portfolio-darkmode.vercel.app/">trillCodes</a>.
         </div>
       </footer>
     </div>

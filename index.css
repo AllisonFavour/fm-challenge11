@@ -18,22 +18,7 @@ body {
 
 button {
   width: auto;
-}
-
-.button-container {
-  display: flex;
-  flex-direction: column;
-  margin: 0 auto;
-  gap: 0.5rem;
-}
-
-.row {
-  display: flex;
-  gap: 0.5rem;
-}
-
-.row button {
-  flex: 1;
+  border: none;
 }
 
 .main-container {
@@ -41,37 +26,17 @@ button {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
   align-items: center;
-}
-
-.logo {
-  text-align: center;
-}
-
-main {
-  background-color: hsl(0, 100%, 100%);
-  padding: 1.1rem;
-  border-radius: 10px;
-  border: 1px solid red;
+  padding-block: 1.6rem;
 }
 
 .flex-container {
-  display: flex;
-}
-
-.first-box {
-  border: 1px solid green;
-}
-
-.first-box p {
-  font-size: 0.7rem;
-  color: hsl(186, 14%, 43%);
-}
-
-.second-box {
-  background-color: hsl(183, 100%, 15%);
-  margin-inline-start: 1.1rem;
-  padding: 1.1rem;
+  background-color: hsl(0, 100%, 100%);
+  min-width: 375px;
   border-radius: 10px;
+  padding: 1.8rem;
+}
+
+footer {
+  text-align: center;
 }/*# sourceMappingURL=index.css.map */

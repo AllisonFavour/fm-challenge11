@@ -32,67 +32,178 @@ body {
 
 button {
   width: auto;
-  // padding: 0.8rem 1.2rem;
+  border: none;
 }
 
-.button-container {
-  // max-width: 400px;
-  display: flex;
-  flex-direction: column;
-  margin: 0 auto;
-  gap: 0.5rem;
-}
+// .button-container {
+//   // max-width: 400px;
+//   display: flex;
+//   flex-direction: column;
+//   margin: 0 auto;
+//   gap: 0.5rem;
+// }
 
-.row {
-  display: flex;
-  gap: 0.5rem;
-}
+// .row {
+//   display: flex;
+//   gap: 0.5rem;
+// }
 
-.row button {
-  flex: 1;
-}
+// .row button {
+//   flex: 1;
+// }
 
 .main-container {
   width: 100%;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  // justify-content: space-around;
   align-items: center;
-}
-
-.logo {
-    text-align: center;
-}
-
-main {
-  background-color: $white;
-    padding: 1.1rem;
-    border-radius: 10px;
-    border: 1px solid red;
+  padding-block: 1.6rem;
 }
 
 .flex-container {
-  display: flex;
+  background-color: $white;
+  min-width: 375px;
+  border-radius: 10px;
+  padding: 1.8rem;
 }
 
-// .bill,
-// .select-tip {
-//   margin-block: 10px;
+// .logo {
+//     text-align: center;
 // }
 
-.first-box {
-  border: 1px solid green;
+// main {
+//   background-color: $white;
+//     padding: 1.1rem;
+//     border-radius: 10px;
+// }
+
+// .flex-container {
+//   display: flex;
+// }
+
+// .first-box p {
+//   color: $neutral-grey-500;
+//   font-size: 0.7rem;
+//   font-weight: 700;
+//   margin-block-end: 0.3rem;
+// }
+
+// .first-box .input {
+//   background-color: $neutral-grey-50;
+//   display: flex;
+//   align-items: center;
+//   padding: 6px 12px;
+//   margin-block-end: 1rem;
+// }
+
+// .input > img {
+//   width: 8px;
+//   height: 8px;
+//   color: $neutral-grey-400;
+// }
+
+// .input input {
+//   border: none;
+//   outline: none;
+//   background-color: transparent;
+//   text-align: right;
+//   color: $neutral-green-900;
+//   font-family: $font-space-mono;
+//   font-weight: 700;
+//   font-size: 0.8rem;
+// }
+// .input input::placeholder {
+//   color: $neutral-grey-400;
+// }
+
+// .button-container {
+//   margin-block: 0.6rem;
+// }
+
+// .button-container button {
+//   background-color: $neutral-green-900;
+//   color: $white;
+//   font-family: $font-space-mono;
+//   font-weight: 0.6rem;
+//   font-weight: 700;
+//   padding: 0.2rem;
+//   border-radius: 4px;
+//   cursor: pointer;
+// }
+// button.green-400 {
+//   background-color: $primary-green-400;
+//   color: $neutral-green-900;
+// }
+// button.grey-50 {
+//   background-color: $neutral-grey-50;
+//   color: $neutral-grey-500;
+// }
+
+// .second-box {
+//   width: 200px;
+//     background-color: $neutral-green-900;
+//     margin-inline-start: 1.1rem;
+//     padding: 1.1rem;
+//     border-radius: 10px;
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: space-between;
+// }
+
+// #display {
+//   display: flex;
+//   flex-direction: column;
+//   gap: 1rem;
+// }
+
+// .flex-display {
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: center;
+
+//   span {
+//     font-size: 1.2rem;
+//     font-weight: 700;
+//     color: $primary-green-400;
+//   }
+// }
+
+// .flex-col {
+//   display: flex;
+//   flex-direction: column;
+// }
+
+// .flex-col > span {
+//   color: $white;
+//   font-size: 0.5rem;
+// }
+
+// .flex-col > span + span {
+//   color: $neutral-grey-400;
+//   font-size: 0.4rem;
+// }
+
+// .reset-btn {
+//   background-color: $primary-green-400;
+//   color: $neutral-green-900;
+//   font-size: 0.6rem;
+//   font-weight: 700;
+//   padding: 0.4rem;
+//   border-radius: 2px;
+//   cursor: pointer;
+// }
+
+footer {
+  text-align: center;
 }
 
-.first-box p {
-  font-size: 0.7rem;
-  color: $neutral-grey-500;
-}
+// .attribution a {
+//   color: $neutral-green-900;
+// }
 
-.second-box {
-    background-color: $neutral-green-900;
-    margin-inline-start: 1.1rem;
-    padding: 1.1rem;
-    border-radius: 10px;
-}
+// .attribution .link {
+//   color: $primary-green-400;
+//   font-weight: 700;
+// }
