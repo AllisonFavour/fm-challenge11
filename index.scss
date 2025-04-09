@@ -44,7 +44,7 @@ body {
   align-items: center;
   // padding: 2rem;
   // margin-top: 2rem;
-  padding-block: 2rem;
+  padding-block: 1.6rem;
 }
 
 .flex-container {
@@ -54,10 +54,11 @@ body {
   gap: 1rem;
   background-color: $white;
   padding: 1rem;
-  margin-block: 2rem;
+  margin-block: 1.2rem;
   border-radius: 10px;
 }
 
+// MEDIA QUERY FOR A MINIMUM OF 700PX
 @media (min-width: 700px) {
   .flex-container {
     min-width: 700px;
@@ -76,9 +77,9 @@ body {
 // FIRST BOX
 .first-box p {
   color: $neutral-grey-500;
-  font-size: 1rem;
+  font-size: 0.8rem;
   font-weight: 700;
-  margin-block-end: 0.4rem;
+  // margin-block-end: 0.4rem;
 }
 
 .first-box .input {
@@ -154,6 +155,28 @@ button.green-400 {
 button.grey-50 {
   background-color: $neutral-grey-50;
   color: $neutral-grey-500;
+
+  input {
+    background-color: transparent;
+    outline: none;
+    border: none;
+    text-align: center;
+    font-family: $font-space-mono;
+    font-size: 1rem;
+    font-weight: 700;
+  }
+}
+
+.people-warning {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  #warning {
+    visibility: hidden;
+    font-size: 0.6rem;
+    color: red;
+  }
 }
 
 .second-box {
@@ -230,47 +253,93 @@ footer {
 
 
 
+// KEYFRAME FOR WARNING
+@keyframes bounceFade {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(5px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
-// .main-container {
-  // text-align: center;
-  // width: 100%;
-  // min-height: 100vh;
-  // display: flex;
-  // flex-direction: column;
-  // // justify-content: space-around;
-  // justify-content: center;
-  // align-items: center;
-  // padding-block: 1.6rem;
+.people-warning #warning {
+  visibility: hidden;
+  opacity: 0;
+  font-size: 0.6rem;
+  color: red;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+
+  &.show {
+    visibility: visible;
+    opacity: 1;
+    animation: bounceFade 0.5s ease-out;
+  }
+}
+
+
+// experiment
+// @keyframes pop {
+//   0% {
+//     transform: scale(1);
+//   }
+//   50% {
+//     transform: scale(1.15);
+//     background-color: #26c2ae; // optional: highlight color
+//   }
+//   100% {
+//     transform: scale(1);
+//   }
 // }
 
-// .logo {
-//   text-align: center;
+// .button-container button.pop-highlight {
+//   animation: pop 0.3s ease-in-out;
 // }
 
-// .flex-container {
-//   background-color: $white;
-//   min-width: 375px;
-//   border-radius: 10px;
-//   padding: 1.8rem;
+// @keyframes fadeGlow {
+//   0% {
+//     box-shadow: 0 0 0px rgba(38, 194, 174, 0);
+//     background-color: inherit;
+//   }
+//   50% {
+//     box-shadow: 0 0 10px rgba(38, 194, 174, 0.6);
+//     background-color: #26c2ae;
+//   }
+//   100% {
+//     box-shadow: 0 0 0px rgba(38, 194, 174, 0);
+//     background-color: inherit;
+//   }
+// }
+
+// .button-container button.glow-persistent,
+// #custom-tip.glow-persistent {
+//   box-shadow: 0 0 10px rgba(38, 194, 174, 0.6);
+//   background-color: #26c2ae;
+//   color: #00474b; /* Adjust for contrast if needed */
 // }
 
 
+@keyframes pulseGlow {
+  0% {
+    box-shadow: 0 0 8px rgba(38, 194, 174, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 16px rgba(38, 194, 174, 0.9);
+  }
+  100% {
+    box-shadow: 0 0 8px rgba(38, 194, 174, 0.4);
+  }
+}
 
-// .logo {
-//     text-align: center;
-// }
-
-// main {
-//   background-color: $white;
-//     padding: 1.1rem;
-//     border-radius: 10px;
-// }
-
-// .flex-container {
-//   display: flex;
-// }
-
-
-
-
-
+.button-container button.pulse-glow,
+#custom-tip.pulse-glow {
+  animation: pulseGlow 1.5s ease-in-out infinite;
+  background-color: #26c2ae;
+  color: #00474b;
+}

@@ -24,7 +24,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-block: 2rem;
+  padding-block: 1.6rem;
 }
 
 .flex-container {
@@ -34,7 +34,7 @@ body {
   gap: 1rem;
   background-color: hsl(0, 100%, 100%);
   padding: 1rem;
-  margin-block: 2rem;
+  margin-block: 1.2rem;
   border-radius: 10px;
 }
 
@@ -53,9 +53,8 @@ body {
 
 .first-box p {
   color: hsl(186, 14%, 43%);
-  font-size: 1rem;
+  font-size: 0.8rem;
   font-weight: 700;
-  margin-block-end: 0.4rem;
 }
 
 .first-box .input {
@@ -134,6 +133,26 @@ button.grey-50 {
   background-color: hsl(189, 47%, 97%);
   color: hsl(186, 14%, 43%);
 }
+button.grey-50 input {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  text-align: center;
+  font-family: "Space Mono", monospace;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.people-warning {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.people-warning #warning {
+  visibility: hidden;
+  font-size: 0.6rem;
+  color: red;
+}
 
 .second-box {
   background-color: hsl(183, 100%, 15%);
@@ -200,4 +219,49 @@ footer {
 .attribution .link {
   color: hsl(172, 67%, 45%);
   font-weight: 700;
+}
+
+@keyframes bounceFade {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(5px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.people-warning #warning {
+  visibility: hidden;
+  opacity: 0;
+  font-size: 0.6rem;
+  color: red;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+.people-warning #warning.show {
+  visibility: visible;
+  opacity: 1;
+  animation: bounceFade 0.5s ease-out;
+}
+
+@keyframes pulseGlow {
+  0% {
+    box-shadow: 0 0 8px rgba(38, 194, 174, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 16px rgba(38, 194, 174, 0.9);
+  }
+  100% {
+    box-shadow: 0 0 8px rgba(38, 194, 174, 0.4);
+  }
+}
+.button-container button.pulse-glow,
+#custom-tip.pulse-glow {
+  animation: pulseGlow 1.5s ease-in-out infinite;
+  background-color: #26c2ae;
+  color: #00474b;
 }/*# sourceMappingURL=index.css.map */

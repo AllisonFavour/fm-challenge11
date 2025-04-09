@@ -22,28 +22,41 @@
             <p>Bill</p>
             <div class="input">
               <img src="images/icon-dollar.svg" alt="Dollar Icon" />
-              <input type="text" name="bill-input" id="bill-input" placeholder="0" />
+              <input
+                type="text"
+                name="bill-input"
+                id="bill-input"
+                placeholder="0"
+              />
             </div>
 
             <p>Select Tip %</p>
             <div class="button-container">
               <div class="row">
-                <button>5%</button>
-                <button>10%</button>
-                <button class="green-400">15%</button>
+                <button data-tip="5">5%</button>
+                <button data-tip="10">10%</button>
+                <button class="green-400" data-tip="15">15%</button>
               </div>
 
               <div class="row">
-                <button>25%</button>
-                <button>50%</button>
-                <button class="grey-50">Custom</button>
+                <button data-tip="25">25%</button>
+                <button data-tip="50">50%</button>
+                <button class="grey-50"><input type="text" name="custom-tip" id="custom-tip" placeholder="Custom"></button>
               </div>
             </div>
 
-            <p>Number of People</p>
+            <div class="people-warning">
+              <p>Number of People</p>
+              <span id="warning">Can't be Zero</span>
+            </div>
             <div class="input">
               <img src="images/icon-person.svg" alt="Person Icon" />
-              <input type="text" name="num-of-people" id="num-of-people" placeholder="0" />
+              <input
+                type="text"
+                name="num-of-people"
+                id="num-of-people"
+                placeholder="0"
+              />
             </div>
           </section>
 
@@ -54,7 +67,7 @@
                   <span>Tip Amount</span>
                   <span>/ person</span>
                 </div>
-                <span>$0.00</span>
+                <span id="js-tip-display">$0.00</span>
               </div>
 
               <div class="flex-display">
@@ -62,7 +75,7 @@
                   <span>Total</span>
                   <span>/ person</span>
                 </div>
-                <span>$0.00</span>
+                <span id="js-total-display">$0.00</span>
               </div>
             </div>
 
@@ -75,12 +88,19 @@
         <div class="attribution">
           <div>
             Challenge by
-          <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-            >Frontend Mentor</a
-          >.
+            <a
+              href="https://www.frontendmentor.io?ref=challenge"
+              target="_blank"
+              >Frontend Mentor</a
+            >.
           </div>
           <div>
-            Coded by <a class="link" href="https://allison-favour-portfolio-darkmode.vercel.app/">trillCodes</a>.
+            Coded by
+            <a
+              class="link"
+              href="https://allison-favour-portfolio-darkmode.vercel.app/"
+              >trillCodes</a
+            >.
           </div>
         </div>
       </footer>

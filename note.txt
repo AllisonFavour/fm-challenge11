@@ -1,0 +1,98 @@
+this code seem to be working pretty decent, i noticed an edge case, it displays NAN when only bill and people input are provided, if no tip button or custom tip input is provided, the tipPerPerson and totalPerPerson displays NAN. how do i handle such edge case, here is the full Javascript code
+
+const billInput = document.getElementById("bill-input");
+const peopleInput = document.getElementById("num-of-people");
+const customTipInput = document.getElementById("custom-tip");
+const tipButtons = document.querySelectorAll(".button-container button");
+const warning = document.getElementById("warning");
+const tipPerPersonDisplay = document.getElementById("js-tip-display");
+const totalPerPersonDisplay = document.getElementById("js-total-display");
+const resetBtn = document.querySelector(".reset-btn");
+
+
+let tipPercent = 0;
+
+function calculateAndDisplay() {
+  const billValue = parseFloat(billInput.value);
+  const peopleValue = parseInt(peopleInput.value);
+
+  if (isNaN(peopleValue) || peopleValue < 1) {
+    warning.classList.add("show");
+  } else {
+    warning.classList.remove("show");
+  }
+
+  if (
+    isNaN(billValue) ||
+    billValue <= 0 ||
+    isNaN(peopleValue) ||
+    peopleValue < 1
+  ) {
+    tipPerPersonDisplay.textContent = "$0.00";
+    totalPerPersonDisplay.textContent = "$0.00";
+    return;
+  }
+
+  let tipAmount = billValue * tipPercent;
+  let tipPerPerson = tipAmount / peopleValue;
+  let totalPerPerson = (billValue + tipAmount) / peopleValue;
+
+  tipPerPersonDisplay.textContent = $${tipPerPerson.toFixed(2)};
+  totalPerPersonDisplay.textContent = $${totalPerPerson.toFixed(2)};
+
+  localStorage.setItem("billValue", billValue);
+  localStorage.setItem("peopleValue", peopleValue);
+  localStorage.setItem("tipPercent", tipPercent);
+}
+
+billInput.addEventListener("input", calculateAndDisplay);
+
+peopleInput.addEventListener("input", calculateAndDisplay);
+
+tipButtons.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    tipButtons.forEach((b) => b.classList.remove("selected"));
+    btn.classList.add("selected");
+  });
+
+  customTipInput.value = '';
+  tipPercent = parseInt(btn.textContent) / 100;
+  calculateAndDisplay();
+});
+
+customTipInput.addEventListener("input", () => {
+  tipButtons.forEach((b) => b.classList.remove("selected"));
+
+  const customValue = parseInt(customTipInput.value);
+  tipPercent = customValue / 100;
+  calculateAndDisplay();
+});
+
+resetBtn.addEventListener("click", () => {
+  billInput.value = "";
+  peopleInput.value = "";
+  customTipInput.value = '';
+  tipPercent = 0;
+
+  tipButtons.forEach((b) => b.classList.remove("selected"));
+  warning.classList.remove("show");
+
+  tipPerPersonDisplay.textContent = "$0.00";
+  totalPerPersonDisplay.textContent = "$0.00";
+
+  // clear local storage
+  localStorage.clear();
+});
+
+// load values on page load from localStorage
+window.addEventListener("DOMContentLoaded", () => {
+  const savedBill = localStorage.getItem("billValue");
+  const savedPeople = localStorage.getItem("peopleValue");
+  const savedTip = localStorage.getItem("tipPercent");
+
+  if (savedBill) billInput.value = savedBill;
+  if (savedPeople) peopleInput.value = savedPeople;
+  if (savedTip) customTipInput.value = savedTip;
+
+  calculateAndDisplay();
+});
