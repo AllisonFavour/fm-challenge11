@@ -148,10 +148,10 @@ body {
   border-radius: 4px;
   cursor: pointer;
 }
-button.green-400 {
-  background-color: $primary-green-400;
-  color: $neutral-green-900;
-}
+// button.green-400 {
+//   background-color: $primary-green-400;
+//   color: $neutral-green-900;
+// }
 button.grey-50 {
   background-color: $neutral-grey-50;
   color: $neutral-grey-500;
@@ -234,6 +234,9 @@ button.grey-50 {
   border: none;
   border-radius: 4px;
   cursor: pointer;
+}
+.reset-btn:active {
+  background-color: hsl(172, 67%, 76%);
 }
 
 

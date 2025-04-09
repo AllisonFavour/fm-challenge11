@@ -124,11 +124,6 @@ body {
   cursor: pointer;
 }
 
-button.green-400 {
-  background-color: hsl(172, 67%, 45%);
-  color: hsl(183, 100%, 15%);
-}
-
 button.grey-50 {
   background-color: hsl(189, 47%, 97%);
   color: hsl(186, 14%, 43%);
@@ -206,6 +201,10 @@ button.grey-50 input {
   border: none;
   border-radius: 4px;
   cursor: pointer;
+}
+
+.reset-btn:active {
+  background-color: hsl(172, 67%, 76%);
 }
 
 footer {
