@@ -124,18 +124,27 @@ body {
   cursor: pointer;
 }
 
-button.grey-50 {
+.grey-50 {
   background-color: hsl(189, 47%, 97%);
   color: hsl(186, 14%, 43%);
 }
-button.grey-50 input {
+.grey-50 input {
   background-color: transparent;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   outline: none;
   border: none;
   text-align: center;
   font-family: "Space Mono", monospace;
   font-size: 1rem;
   font-weight: 700;
+}
+.grey-50 input::-moz-placeholder {
+  color: hsl(186, 14%, 43%);
+}
+.grey-50 input::placeholder {
+  color: hsl(186, 14%, 43%);
 }
 
 .people-warning {
@@ -216,6 +225,11 @@ footer {
 }
 
 .attribution .link {
+  color: hsl(172, 67%, 45%);
+  font-weight: 700;
+}
+
+.attribution span.js-year {
   color: hsl(172, 67%, 45%);
   font-weight: 700;
 }

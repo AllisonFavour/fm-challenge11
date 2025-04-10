@@ -7,14 +7,6 @@ const tipPerPersonDisplay = document.getElementById("js-tip-display");
 const totalPerPersonDisplay = document.getElementById("js-total-display");
 const resetBtn = document.querySelector(".reset-btn");
 
-// console.log(billInput);
-// console.log(customTipInput);
-// console.log(peopleInput);
-// console.log(tipPerPersonDisplay);
-// console.log(totalPerPersonDisplay);
-// console.log(resetBtn);
-console.log(tipButtons);
-
 let tipPercent = 0;
 
 function calculateAndDisplay() {
@@ -28,11 +20,7 @@ function calculateAndDisplay() {
   }
 
   if (
-    isNaN(billValue) ||
-    billValue <= 0 ||
-    isNaN(peopleValue) ||
-    peopleValue < 1
-  ) {
+    isNaN(billValue) || billValue <= 0 || isNaN(peopleValue) || peopleValue < 1) {
     tipPerPersonDisplay.textContent = "$0.00";
     totalPerPersonDisplay.textContent = "$0.00";
     return;
@@ -126,23 +114,7 @@ window.addEventListener("DOMContentLoaded", () => {
   if (savedBill) billInput.value = savedBill;
   if (savedPeople) peopleInput.value = savedPeople;
 
-  // if (selectedTip) {
-  //   const buttonToSelect = Array.from(tipButtons).find(btn => btn.dataset.tip === selectedTip);
-
-  //   if (buttonToSelect) {
-  //     buttonToSelect.classList.add(('selected'));
-
-  //     buttonToSelect.classList.add("fade-glow");
-
-  //     buttonToSelect.addEventListener("animationend", () => {
-  //       buttonToSelect.classList.remove("fade-glow");
-  //     }, { once: true });
-  //   }
-  //   tipPercent = parseFloat(savedTip);
-  // } else if (savedTip) {
-  //   tipPercent = parseFloat(savedTip);
-  //   customTipInput.value = (tipPercent * 100).toString();
-  // }
-
   calculateAndDisplay();
 });
+
+document.querySelector('.js-year').textContent = new Date().getFullYear();
